@@ -1,0 +1,256 @@
+/* Estilos generales */
+body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fuente amigable y divertida */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #ffeef7, #ffd6e8); /* Fondo rosa pastel suave */
+    color: #e75480; /* Rosa delicado para el texto */
+    line-height: 1.6;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(45deg, #ffccd5, #ffc2d1); /* Degradado rosa pastel */
+    color: white; /* Texto blanco */
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.5); /* Sombra rosa pastel */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Más grande y chic */
+    text-shadow: 2px 2px 5px #ffb6c1; /* Sombra de texto rosa pastel */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white; /* Enlaces blancos */
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+    border-bottom: 2px solid transparent; /* Línea decorativa */
+}
+
+nav a:hover {
+    color: #f48fb1; /* Rosa pastel al pasar el mouse */
+    border-bottom: 2px solid #f48fb1; /* Línea rosa al pasar el mouse */
+    transform: scale(1.1); /* Ligeramente más grande */
+}
+
+/* Sección de introducción */
+.intro {
+    display: flex; /* Para alinear imagen y texto */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-around; /* Espacio entre los elementos */
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Imagen de la introducción */
+.intro img {
+    max-width: 40%; /* Reduce el tamaño de la imagen */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4); /* Sombra suave */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+.intro img:hover {
+    transform: scale(1.05); /* Ligero zoom */
+}
+
+/* Texto de la introducción */
+.intro-text {
+    max-width: 50%; /* Limita el ancho del texto */
+    color: #e75480; /* Rosa pastel delicado */
+}
+
+/* Títulos principales */
+h2 {
+    text-align: center;
+    color: #f28cb5; /* Rosa pastel más fuerte */
+    font-size: 2em;
+    text-shadow: 1px 1px 3px #f48fb1; /* Sombra rosa pastel */
+}
+
+/* Galería de recursos */
+.recurso {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Ajustar el tamaño de las imágenes y organizar en línea */
+.recurso ul {
+    display: flex;            /* Imágenes en fila */
+    flex-wrap: wrap;          /* Ajusta las filas si no hay espacio */
+    gap: 40px;                /* Espacio entre imágenes */
+    padding: 0;
+    list-style: none;         /* Quita los puntos de la lista */
+    justify-content: center;  /* Centra las imágenes */
+}
+
+.recurso li {
+    flex: 1 1 calc(40% - 40px); /* Dos imágenes por fila */
+    box-sizing: border-box;
+    text-align: center; /* Centra el contenido */
+    border: 4px solid #ffd6e8; /* Borde rosa muy claro */
+    border-radius: 20px; /* Esquinas redondeadas */
+    padding: 15px;
+    background: white; /* Fondo blanco para resaltar */
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4); /* Sombra suave */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efecto al pasar el mouse sobre las tarjetas */
+.recurso li:hover {
+    transform: scale(1.1); /* Ligeramente más grande */
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.4); /* Sombra rosa pastel más intensa */
+}
+
+/* Imágenes de la galería */
+.recurso img {
+    width: 360px; /* Imágenes grandes */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 15px; /* Bordes suaves */
+    transition: transform 0.4s ease;
+}
+
+/* Efecto sobre las imágenes */
+.recurso img:hover {
+    transform: rotate(3deg) scale(1.1); /* Ligero giro y zoom */
+}
+
+/* Enlaces en los recursos */
+.recurso p a {
+    color: #f48fb1; /* Rosa pastel */
+    font-weight: bold; /* En negrita */
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s ease;
+}
+
+.recurso p a:hover {
+    color: #e75480; /* Rosa más fuerte al pasar el mouse */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #ffc2d1; /* Rosa pastel */
+    color: white; /* Texto blanco */
+    font-size: 1.2em;
+    box-shadow: 0 -5px 15px rgba(255, 182, 193, 0.4);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Apila imagen y texto en móviles */
+        text-align: center; /* Centra el texto */
+    }
+
+    .intro img {
+        max-width: 80%; /* Imágenes más pequeñas */
+    }
+
+    .intro-text {
+        max-width: 100%; /* Texto ancho completo */
+    }
+
+    .recurso li {
+        flex: 1 1 100%; /* Una imagen por fila en pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 2em; /* Título más pequeño */
+    }
+
+    .recurso img {
+        width: 280px; /* Imágenes más pequeñas */
+    }
+}
+
+/* Detalle especial: Icono de Hello Kitty en el header */
+header::before {
+    content: "🎀";
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+/* Centrar el formulario */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido en el main */
+    text-align: center; 
+    padding: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+    width: 100%;
+    max-width: 400px; /* Define un ancho máximo */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center;
+}
+
+/* Asegurar que los labels y campos se alineen correctamente */
+form label {
+    width: 100%;
+    text-align: left; /* Mantiene la alineación del texto */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #e75480;
+}
+
+/* Campos de entrada */
+form input,
+form textarea {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ffd6e8;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: left; /* El texto dentro de los inputs a la izquierda */
+}
+
+/* Estilo del botón */
+form button {
+    background-color: #e75480;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #f48fb1;
+}
+
+
+/* Footer al final de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer quede abajo */
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
